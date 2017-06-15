@@ -1,0 +1,153 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.2;
+	color: inherit;
+}
+
+button {
+	display: none;
+}
+
+a {
+	color: #009a61;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #004e31;
+	text-decoration: underline;
+}
+
+.stream-list {
+	margin-bottom: 10px;
+}
+
+.stream-list.top-indent {
+	margin-top: -10px;
+}
+
+.stream-list__item {
+	margin: 0;
+	border-bottom: 1px solid #eee;
+	padding: 10px 0;
+}
+
+.stream-list__item .author {
+	margin-bottom: 10px;
+	color: #999;
+	font-size: 13px;
+}
+
+.stream-list__item .author a {
+	color: #999;
+}
+
+.stream-list__item .author small {
+	color: #ddd;
+}
+
+.stream-list__item .title {
+	display: inline;
+	margin: 0 5px 0 0;
+	font-size: 16px;
+}
+
+.stream-list__item .title a {
+	color: #333;
+}
+
+.stream-list__item .title a:hover {
+	color: #017e66;
+}
+.stream-list__item .title a:visited {
+	font-weight: 400;
+}
+
+.stream-list__item .small-title {
+	margin: 0 0 5px;
+	font-size: 16px;
+}
+
+.stream-list__item .split:before {
+	content: "·";
+	color: #ddd;
+}
+
+.stream-list__item .summary {
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.stream-list__item .excerpt {
+	margin: 5px 0 0;
+	color: #777;
+	font-size: 13px;
+	line-height: 1.6;
+	overflow: hidden;
+}
+
+.blog-stream .stream-list__item {
+	padding: 15px 0;
+}
+
+.blog-stream .stream-list__item .author {
+	margin-top: 10px;
+}
+
+.blog-stream .stream-list__item .author a {
+	color: #009a61;
+}
+
+.blog-stream .stream-list__item .blog-title {
+	font-size: 16px;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.blog-stream .stream-list__item .article-list {
+	border-left: 5px solid #EEE;
+	padding: 10px 20px;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+.stream-list__item.highlight {
+	background: #FFF9EB;
+}
+
+.notify-stream .time {
+	margin: 15px 0 0;
+	padding: 5px 0;
+	border-bottom: 1px solid #eee;
+	font-size: 14px;
+}
+
+.notify-stream .stream-list__item:before {
+	margin-left: 10px;
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background: #F5A623;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+}
+
+.notify-stream .stream-list__item.viewed:before {
+	visibility: hidden;
+}
+
+.stream-list__item {
+	background: #FFF9EA;
+}
+
+.stream-list__item.viewed {
+	background: transparent;
+}
