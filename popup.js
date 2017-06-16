@@ -6,15 +6,36 @@ bg.getNotifications(function(data) {
 		alert('未登录');
 		chrome.tabs.create({ url: 'https://segmentfault.com/user/login' });
 	}
-	$('#popup').append($html.find('.stream-list').html());
+	$('#popup').empty().append($html.find('.stream-list').html());
 });
 
 $('#popup').on('click', 'a', function() {
 	var $this = $(this);
 	var href = $this.attr('href');
-	if (href.substring(0, 1) === '/' && href.substring(0, 2) !== '//') {
-		href = 'https://segmentfault.com' + href;
-	}
+	href = transUrl(href);
 	chrome.tabs.create({ url: href });
 	return false;
 });
+
+$('#popup').on('click', 'button', function() {
+	var $this = $(this);
+	var $unViewed = $('#popup').find('.stream-list__item:not(".viewed")');
+	$unViewed.each(function(index, el) {
+		var $el = $(el);
+		$el.addClass('viewed');
+		var url = $el.find('a:last').attr('href');
+		url = transUrl(url);
+		$.ajax({
+			url: url,
+			method: 'get'
+		});
+	});
+	$this.attr('disabled', true);
+});
+
+function transUrl(url) {
+	if (url.substring(0, 1) === '/' && url.substring(0, 2) !== '//') {
+		url = 'https://segmentfault.com' + url;
+	}
+	return url;
+}
