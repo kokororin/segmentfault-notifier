@@ -20,4 +20,4 @@ var getNotifications = function(cb) {
 	});
 };
 
-setInterval(getNotifications, 1500);
+setInterval(getNotifications, 5000);
