@@ -8,10 +8,10 @@ https://chrome.google.com/webstore/detail/hliakgdmocbgojcikbeloeifaoiclkhg
 
 # Change Log
 
-## Framework7 v1.1.1
+## v1.1.1
   * Add a button for clear all notifications
 
-## Framework7 v1.1.0
+## v1.1.0
   * First version
 
 
